@@ -1,0 +1,107 @@
+
+#include "LedControl.h"
+
+
+LedControl lc=LedControl(12,10,11,1);
+
+
+unsigned long delaytime1=50;
+unsigned long delaytime2=50;
+void setup() {
+  
+  lc.shutdown(0,false);
+  /* Set the brightness to a medium values */
+  lc.setIntensity(0,4);
+  /* and clear the display */
+  lc.clearDisplay(0);
+}
+
+
+int d= (B00000000,
+B00000000,
+B00000000,
+B00000000,
+B00010000,
+B00010000,
+B00010000,
+B00000000);
+
+void moveSingle(int i,int j){
+  
+  if( joystick() == 2){
+    //lc.setLed(0,i,j,false);
+    if (i<=0){
+      i=7;
+    }
+    else{
+     i--;
+    }   
+  }
+  else if (joystick() == 1){
+    //lc.setLed(0,i,j,false);
+    if (i>=7){
+      i=0;
+    }
+    else {
+      i++;
+    }   
+  }  
+  
+  else if( joystick() == 3){
+    //lc.setLed(0,i,j,false);
+    if (j<=0){
+      j=7;
+    }
+    else{
+     j--;
+    }  
+  }
+  else if (joystick() == 4){
+    //lc.setLed(0,i,j,false);
+    if (j>=7){
+      j=0;
+    }
+    else {
+      j++;
+    }
+  }
+  
+  
+  
+
+  lc.setLed(0,i,j,true);
+  delay(60); 
+  moveSingle(i,j);
+  } 
+
+int directionToGo = 0;
+int joystick() {
+  
+  int sensorValueX = analogRead(A0);
+  int sensorValueY = analogRead(A1);
+
+  if (sensorValueX<40) {
+    directionToGo = 1; 
+  }
+  if (sensorValueX>999){
+    directionToGo = 2; 
+  }
+  if (sensorValueX>=480 and sensorValueX<=520 and sensorValueY>=480 and sensorValueY<=520){
+    directionToGo =0;
+  }
+  if (sensorValueY<40) {
+    directionToGo = 3; 
+  }
+  if (sensorValueY>999){
+    directionToGo = 4; 
+  }
+ 
+  
+  
+  
+  return directionToGo;     
+}
+
+void loop() { 
+  moveSingle(4,4);
+}

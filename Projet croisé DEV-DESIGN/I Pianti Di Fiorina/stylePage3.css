@@ -1,0 +1,341 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: acumin pro;
+  min-height: 100vh;
+  max-width: 100vw;
+}
+li {
+  font-size: 11px;
+  font-weight: bold;
+  padding: 4px;
+  list-style: none;
+}
+.barreNav {
+  background-color: rgb(240, 240, 240);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.liensHaut {
+  color: black;
+  text-decoration: none;
+}
+.liensHaut:hover {
+  color: rgb(28, 200, 28);
+  text-decoration: underline;
+}
+.liensNav {
+  display: flex;
+  height: 45px;
+  max-width: 100vw;
+  background-color: rgb(240, 240, 240);
+  padding-top: 14px;
+  gap: 10px;
+  text-decoration: none;
+}
+.imageNav {
+  cursor: pointer;
+  padding-bottom: 15px;
+  padding-right: 25px;
+  height: 47px;
+  align-self: center;
+}
+.page3 {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(247, 245, 245);
+}
+.top1 {
+  padding: 1em 10em;
+  display: flex;
+  gap: 45em;
+}
+.sliders {
+  display: flex;
+  flex-direction: column;
+  height: 2rem;
+  width: 2rem;
+  text-align: center;
+  justify-content: center;
+  border: 1px solid rgb(192, 189, 189);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.sliders:hover {
+  border: 1px dashed rgb(225, 52, 52);
+}
+.hautPage {
+  display: flex;
+  justify-content: center;
+  gap: 6em;
+  padding-bottom: 1em;
+  /* border-bottom: 2px solid rgb(154, 32, 32); */
+}
+.imagePot {
+  display: flex;
+  flex-direction: column;
+  background-image: url(images/pot.jpg);
+  background-position: center;
+  background-size: 100%;
+  border-radius: 10px;
+  width: 25rem;
+  height: 25rem;
+  justify-content: center;
+  align-items: center;
+}
+.txtImg {
+  gap: 2em;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.txtImg p {
+  text-align: center;
+  font-size: 0.8em;
+}
+.imageNav2 {
+  background-image: url(images/rick-rond.png);
+  background-position: center;
+  background-size: 100%;
+  border-radius: 50%;
+  border: 2px solid white;
+  cursor: pointer;
+  height: 3em;
+  width: 3em;
+}
+.formGlobal {
+  display: flex;
+  flex-direction: column;
+  border: 2px transparent;
+  border-radius: 1em;
+  width: 35%;
+  gap: 3em;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+}
+select,
+option {
+  height: 2.2em;
+  width: 20em;
+  border-radius: 0.5em;
+  border: 2px solid rgb(221, 219, 219);
+}
+option {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.formSelect {
+  height: 3em;
+  display: flex;
+  flex-direction: column;
+}
+.form {
+  font-size: 0.8em;
+  font-weight: bold;
+  display: inline-block;
+  border-color: black;
+}
+.formSearch {
+  display: flex;
+  flex-direction: column;
+}
+.searchField {
+  height: 2.2em;
+  width: 20em;
+  border-radius: 0.5em;
+  border: 2px solid rgb(221, 219, 219);
+}
+.formBtn {
+  background-color: rgb(226, 107, 107);
+  font-size: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 12px 12px;
+  border: 2px transparent;
+  border-radius: 1em;
+  margin: 2px;
+}
+.formBtn:hover {
+  margin: 0px;
+  border: 2px solid red;
+  background-color: transparent;
+}
+.midPage {
+  border-top: 2px solid rgb(214, 213, 213);
+  border-bottom: 2px solid rgb(214, 213, 213);
+  display: flex;
+  align-self: center;
+  gap: 1em;
+  max-width: 74%;
+  margin: 1.5em 0em;
+  padding: 1em 0em;
+}
+.mid1 {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 0;
+  flex-grow: 1;
+}
+.mid1 p {
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+.mid2 {
+  flex-basis: 0;
+  flex-grow: 1;
+}
+.mid3 {
+  flex-basis: 0;
+  flex-grow: 1;
+}
+
+.basPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  margin: 5em 0em;
+}
+
+.imageBas {
+  border-radius: 1em;
+  object-fit: cover;
+  height: 21rem;
+  width: 74%;
+}
+.txtBasP {
+  display: flex;
+  max-width: 74%;
+  gap: 1em;
+}
+.txtBas1 {
+  font-size: 0.9em;
+  flex-basis: 0;
+  flex-grow: 2;
+}
+.txtBas2 {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 0.8em;
+  flex-basis: 0;
+  flex-grow: 1;
+}
+.sautsPages {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  border-top: 2px solid rgb(214, 213, 213);
+  padding: 3em 0em 1em;
+  width: 74%;
+  align-self: center;
+}
+.sautP {
+  text-decoration: none;
+  color: rgb(161, 159, 159);
+}
+.sautP:focus {
+  color: rgb(17, 165, 47);
+  text-decoration: underline;
+}
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0, 179, 60);
+  border-top: 3px solid rgb(99, 197, 127);
+  height: 180px;
+  gap: 50px;
+}
+.liensFoot {
+  flex-basis: 0;
+  flex-grow: 1;
+  gap: 5px;
+  padding-right: 45px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 50px;
+}
+.lien a {
+  text-decoration: none;
+  color: white;
+}
+.lien a:hover {
+  color: rgb(237, 15, 63);
+}
+.picFoot {
+  flex-basis: 0;
+  padding-top: 7px;
+}
+.imgFoot {
+  flex-basis: 0;
+  border: 2px solid rgb(99, 197, 127);
+  border-radius: 38%;
+  max-height: 165px;
+}
+.iconsFoot {
+  flex-basis: 0;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 170px;
+}
+.mailBox {
+  max-width: 185px;
+  flex-basis: 0;
+  flex-grow: 0;
+  display: flex;
+  background-color: rgb(0, 179, 60);
+  border: 2px solid rgb(235, 230, 230);
+  border-radius: 5px;
+  align-items: center;
+}
+.mailBox input {
+  max-width: 87%;
+  border: 1px transparent;
+  background-color: rgb(0, 179, 60);
+  padding: 8px 5px 8px 3px;
+}
+.mailBox input:focus {
+  outline: rgb(0, 179, 60);
+}
+.mailBox input::placeholder {
+  color: rgb(231, 225, 225);
+}
+.arrow {
+  cursor: pointer;
+  max-width: 5%;
+  color: white;
+  padding-right: 20px;
+  padding-bottom: 4px;
+}
+.arrow:hover {
+  transition: all 300ms;
+  transform: rotate(-135deg);
+  padding-left: 10px;
+  padding-bottom: 2px;
+}
+.lienRZO {
+  padding-top: 10px;
+  padding-right: 40px;
+  gap: 20px;
+  display: flex;
+  color: white;
+}
+.liensRzo {
+  text-decoration: none;
+  color: white;
+}
+.liensRzo:hover {
+  color: rgb(176, 58, 58);
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulaire tableau</title>
+  </head>
+  <body>
+    <h2>Formulaire</h2>
+    <table border="9">
+        <form>
+      <tr>
+        <td><label for="nom1">Nom:</label></td>
+        <td>
+          <input
+            type="text"
+            name="nom"
+            id="nom1"
+            placeholder="Entrez votre nom"
+            required
+          />
+        </td>
+      </tr>
+      <tr>
+        <td><label for="mail1">Email:</label></td>
+        <td>
+          <input
+            type="email"
+            name="mail"
+            id="mail1"
+            placeholder="Indiquez votre Email"
+            required
+          />
+        </td>
+      </tr>
+      <tr>
+        <td><label for="pass1">Mot de Passe:</label></td>
+        <td>
+          <input
+            type="password"
+            name="Mot de Passe"
+            id="pass1"
+            length="25"
+            placeholder="Entrez votre mot de Passe"
+            required
+          />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Possedez vous un véhicule?
+        </td>
+        <td><label for="oui">Oui</label>
+            <input type="radio" name="choix" id="Oui" checked />
+            <label for="non">Non</label>
+            <input type="radio" name="choix" id="Non" /></td>
+      </td>
+    </tr>
+    <tr>
+      <td>
+          Si oui, depuis quelle date?
+      </td>
+      <td><input type="datetime-local" /></td>
+    </tr>
+    <tr>
+        <td>Choisissez la couleur</td>
+        <td><input type="color" /></td>
+    </tr>
+    <tr><td>Choisissez la marque</td>
+        <td><select name="voitures" id="voiture">
+            <option value="default">-</option>
+            <option value="honda">Honda</option>
+            <option value="acura">Acura</option>
+            <option value="toyota">Toyota</option>
+            <option value="lexus">Lexus</option>
+            <option value="ford">Ford</option>
+            <option value="shelby">Shelby</option>
+          </select></td>
+
+    </tr>
+    <tr><td><label for="conditions" id="conditions" checked
+        >Accepter les conditions</label</td>
+        <td><input type="checkbox" name="conditions" id="conditions" /></td>
+    </tr>
+    <tr>
+        <td>Commentaires</td>
+        <td><textarea
+            name="Commentaires"
+            id="commentaire"
+            maxlength="140"
+            cols="30"
+            rows="7"
+          >
+          </textarea></td>
+    </tr>
+    <tr><td>Joindre un fichier</td>
+        <td><input type="file" />
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" style="text-align: center;"><button type="submit">Envoyer</button></td>
+    </form>
+    </table>
+    <br><br><br><br>
+    <a href="index.html"> Page d'accueil </a>
+    <a href="contact.html"> Contactez-nous </a>
+    <a href="about.html"> A propos de nous </a>
+    <a href="tables.html"> Tableaux et listes</a>
+  </body>
+</html>

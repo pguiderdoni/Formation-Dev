@@ -1,0 +1,156 @@
+Exemple 6 : Quels sont les prix pratiqués pour la bière Coors par rapport à la moyenne des prix ?
+
+
+SELECT nom_bar, prix, nom_biere (select round(AVG(prix), 2) from tarifs) as moyenne, round(prix-(select round(AVG(prix), 2) 
+from tarifs), 2) as difference 
+
+FROM tarifs, bieres, bars 
+
+WHERE bieres.num_biere=tarifs.num_biere and tarifs.num_bar=bars.num_bar and bieres.nom_biere='Coors';
+
+
+ou Best:
+
+SELECT
+bars.nom_bar, tarifs.prix, bieres.nom_biere, moyenne_prix.moyenne_biere, 
+round(tarifs.prix-moyenne_prix.moyenne_biere, 2) as difference 
+
+FROM 
+tarifs, bieres, bars, (select round(AVG(prix), 2) moyenne_biere from tarifs) as moyenne_prix 
+
+WHERE 
+bieres.num_biere=tarifs.num_biere AND tarifs.num_bar=bars.num_bar AND bieres.nom_biere='Coors';
+
+
+
+---------------------------------------------------------------------------------------------------------
+
+
+Exemple 7 : Comment obtenir le prix de la bière Coors par bar, 
+par rapport à la moyenne des prix de la bière Coors pour tous les bars ?
+
+SELECT bars.nom_bar, bieres.nom_biere, round(tarifs.prix-(select round(avg(tarifs.prix), 2) GROUP BY bars.nom_bar 
+from tarifs, bieres where tarifs.num_biere=bieres.num_biere and bieres.nom_biere='Coors'), 2) 
+FROM bieres, tarifs, bars 
+where bieres.num_biere=tarifs.num_biere and tarifs.num_bar=bars.num_bar and bieres.nom_biere='Coors';
+
+
+ou Best:
+
+SELECT
+bars.nom_bar, tarifs.prix, bieres.nom_biere, moyenne_prix.moyenne_biere, 
+round(tarifs.prix-moyenne_prix.moyenne_biere, 2) as difference 
+
+FROM 
+tarifs, bieres, bars, (select round(AVG(prix), 2) moyenne_biere from tarifs, bieres WHERE tarifs.num_biere=bieres.num_biere AND bieres.nom_biere='Coors') as moyenne_prix 
+
+WHERE 
+bieres.num_biere=tarifs.num_biere AND tarifs.num_bar=bars.num_bar AND bieres.nom_biere='Coors';
+
+
+
+---------------------------------------------------------------------------------------------------------
+
+exemple 9 ; le prix de la Bud chez Joe's
+
+SELECT bieres.nom_biere, bars.nom_bar, tarifs.prix
+FROM bieres,bars,tarifs
+WHERE bieres.num_biere=tarifs.num_biere and bars.num_bar=tarifs.num_bar and 
+bieres.nom_biere='Bud' and bars.nom_bar='Joe''s';
+
+
+---------------------------------------------------------------------------------------------------------
+
+exemple 10: clients dont le tel commence par 831
+
+SELECT clients.nom_client, clients.telephone
+FROM clients
+WHERE clients.telephone LIKE '831%';
+
+---------------------------------------------------------------------------------------------------------
+exemple 11:bieres qu'au moins 1 client de Joe's apprecie
+
+SELECT DISTINCT
+bieres.nom_biere
+FROM
+bars, frequenter, aimer, bieres
+WHERE
+bars.num_bar=frequenter.num_bar AND
+frequenter.num_client=aimer.num_client AND
+bieres.num_biere=aimer.num_biere
+AND bars.nom_bar='Joe''s';
+
+
+OR
+
+SELECT *
+FROM bieres
+WHERE num_biere in(
+    select num_biere
+    from aimer
+    where num_client in(
+        select num_client
+        FROM frequenter
+        where num_bar=(
+            select num_bar
+            from bars
+            where nom_bar='Joe''s'
+            )
+        )
+    );
+
+
+
+
+---------------------------------------------------------------------------------------------------------
+les bieres qui ont la meme marque
+
+select v1.nom_biere, v2.nom_biere
+
+from bieres v1, bieres v2
+
+where v1.marque=v2.marque and v1.nom_biere < v2.nom_biere order by 1 (ou order by v1.nom_biere);
+
+---------------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------------------------
+CLIENTS QUI AIMENT DES BIERES
+
+SELECT clients.nom_client
+
+FROM clients, aimer, bieres
+
+WHERE clients.num_client=aimer.num_client AND aimer.num_biere=bieres.num_biere GROUP BY clients.nom_client
+
+ou
+
+SELECT clients.nom_client
+
+FROM clients, aimer
+
+WHERE clients.num_client=aimer.num_client;
+
+
+
+mais en fait
+
+SELECT nom_client
+
+FROM clients
+
+WHERE clients.num_client in(select clients.num_client from aimer);
+
+
+---------------------------------------------------------------------------------------------------------
+Moyenne des prix par marque > 2
+
+SELECT marque, AVG(prix) as moyenne
+FROM tarifs, bieres
+WHERE bieres.num_biere=tarifs.num_biere
+GROUP BY bieres.marque
+HAVING moyenne >2;
+
+---------------------------------------------------------------------------------------------------------

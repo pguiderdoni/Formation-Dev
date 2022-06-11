@@ -1,0 +1,126 @@
+{% extends "base.html" %}{% with messages =
+get_flashed_messages(with_categories=true) %} {% if messages %} {% for category,
+message in messages %} {% if category == "success" %}
+<div
+  class="flex p-4 mt-4 mb-4 text-sm text-green-700 bg-green-100 rounded-lg dark:bg-green-200 dark:text-green-800"
+  role="alert"
+>
+  <svg
+    class="inline flex-shrink-0 mr-3 w-5 h-5"
+    fill="currentColor"
+    viewBox="0 0 20 20"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      fill-rule="evenodd"
+      d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+      clip-rule="evenodd"
+    ></path>
+  </svg>
+  <div>
+    <span class="font-medium">{{message}}</span> Bienvenue sur votre compte !!
+  </div>
+</div>
+{% endif %} {% endfor %} {% endif %} {% endwith %} {% block title %}Mon compte{%
+endblock %}{% block content %}{% with messages =
+get_flashed_messages(with_categories=true) %} {% if messages %} {% for category,
+message in messages %} {% if category == "fail" %}
+<div
+  class="flex p-4 mb-4 text-sm text-red-700 bg-red-100 rounded-3xl dark:bg-red-200 dark:text-red-800"
+  role="alert"
+>
+  <svg
+    class="inline flex-shrink-0 mr-3 w-5 h-5"
+    fill="currentColor"
+    viewBox="0 0 20 20"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      fill-rule="evenodd"
+      d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+      clip-rule="evenodd"
+    ></path>
+  </svg>
+  <div><span class="font-medium">{{message}}</span> veuillez réessayer...</div>
+</div>
+{% endif %} {% endfor %} {% endif %} {% endwith %}
+<br /><br /><br />
+<div class="bg-white opacity-80 flex-col shadow overflow-hidden sm:rounded-lg">
+  <div class="px-4 py-5 sm:px-6">
+    <h3 class="text-lg leading-6 font-medium font-extrabold text-gray-900">
+      Mes informations personnelles:
+    </h3>
+  </div>
+  <div class="border-t border-gray-200">
+    <dl>
+      <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+        <dt class="text-sm font-medium text-black font-bold">Nom :</dt>
+        <dd class="mt-1 text-sm text-black">{{user.nom}}</dd>
+        <a href="/modifs/nom"
+          ><button
+            class="bg-gradient-to-r from-sky-600 to-sky-900 hover:bg-blue-700 text-white text-sm font-bold py-2 px-4 rounded-full"
+          >
+            Modifier
+          </button></a
+        >
+      </div>
+      <hr />
+      <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+        <dt class="text-sm font-medium text-black font-bold">
+          Adresse E-mail :
+        </dt>
+        <dd class="mt-1 text-sm text-gray-900">{{user.email}}</dd>
+        <a href="/modifs/email"
+          ><button
+            class="bg-gradient-to-r from-sky-600 to-sky-900 hover:bg-blue-700 text-white text-sm font-bold py-2 px-4 rounded-full"
+          >
+            Modifier
+          </button></a
+        >
+      </div>
+      <hr />
+      <div
+        class="bg-red flex flex-row bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6"
+      >
+        <div class="text-sm font-medium text-black font-bold">Adresse :</div>
+        <div class="mt-1 text-sm text-gray-900">{{user.adresse}}</div>
+        <a href="/modifs/adresse"
+          ><button
+            class="bg-gradient-to-r from-sky-600 to-sky-900 hover:bg-blue-700 text-white text-sm font-bold py-2 px-4 rounded-full"
+          >
+            Modifier
+          </button></a
+        >
+      </div>
+      <hr />
+      <br />
+      <div
+        class="bg-red flex flex-row bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6"
+      >
+        <div class="text-sm font-medium text-black font-bold"></div>
+        <div class="mt-1 text-sm text-gray-900">
+          Vous pouvez modifier votre mot de passe actuel:
+        </div>
+        <a href="/modifs/password"
+          ><button
+            class="bg-gradient-to-r from-sky-600 to-sky-900 hover:bg-blue-700 text-white text-sm font-bold py-2 px-4 rounded-full"
+          >
+            Modifier mon mot de passe
+          </button></a
+        >
+      </div>
+      <hr />
+      <!-- <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+        <dt class="text-sm font-medium text-black font-bold">
+          A propos de moi :
+        </dt>
+        <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+          Fugiat ipsum ipsum deserunt culpa aute sint do nostrud anim incididunt
+          cillum culpa consequat.
+        </dd>
+      </div> -->
+    </dl>
+  </div>
+</div>
+
+{% endblock %}

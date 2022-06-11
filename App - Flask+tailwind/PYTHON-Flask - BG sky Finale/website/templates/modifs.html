@@ -1,0 +1,192 @@
+{% extends "base.html" %}{% block title %}Modifier Infos{% endblock %} {% block
+content%}
+<div class="min-h-full flex justify-center py-12 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-md w-full space-y-8">
+    <form class="mt-8 space-y-6" method="POST">
+      <div class="rounded-md shadow-sm -space-y-px">
+        {% if champ == "nom" %}
+        <div>
+          <h2 class="mt-6 text-white text-center text-3xl font-extrabold">
+            Modifier mon nom
+          </h2>
+        </div>
+        <br />
+        <div class="text-grey-900">
+          <div>
+            <label for="nom" class="sr-only"> nom </label>
+            <input
+              id="nom"
+              name="nom"
+              type="text"
+              required
+              readonly
+              class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-black font-bold rounded-t-md rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+              placeholder="Votre nom actuel:  {{ user.nom }} "
+            />
+          </div>
+          <div>
+            <label for="new_nom" class="sr-only">new_nom</label>
+            <input
+              id="new_nom"
+              name="new_nom"
+              type="text"
+              required
+              class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+              placeholder="Entrez votre nouveau nom"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="rounded-md shadow-sm -space-y-px">
+        {% elif champ == "email" %}
+        <div>
+          <h2 class="mt-6 text-white text-center text-3xl font-extrabold">
+            Modifier mon email
+          </h2>
+        </div>
+        <br />
+        <div class="text-grey-900">
+          <div>
+            <label for="email" class="sr-only">email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              required
+              readonly
+              class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-black font-bold rounded-t-md rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+              placeholder="Votre E-mail actuel: {{user.email}}"
+            />
+          </div>
+          <div>
+            <label for="new_email" class="sr-only">new_email</label>
+            <input
+              id="new_email"
+              name="new_email"
+              type="mail"
+              required
+              class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+              placeholder="Entrez votre nouvelle adresse E-mail"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="rounded-md shadow-sm -space-y-px">
+        {% elif champ == "adresse" %}
+        <div>
+          <h2 class="mt-6 text-white text-center text-3xl font-extrabold">
+            Modifier mon adresse
+          </h2>
+        </div>
+        <br />
+        <div class="text-grey-900">
+          <div>
+            <label for="adresse" class="text-black sr-only">adresse</label>
+            <input
+              id="adresse"
+              name="adresse"
+              type="texte"
+              required
+              readonly
+              class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-black font-bold rounded-t-md rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+              placeholder="Votre adresse actuelle: {{user.adresse}}"
+            />
+          </div>
+          <div>
+            <label for="new_adresse" class="sr-only">new_adresse</label>
+            <input
+              id="new_adresse"
+              name="new_adresse"
+              type="text"
+              required
+              class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+              placeholder="Entrez votre nouvelle adresse"
+            />
+          </div>
+        </div>
+        {% elif champ == "password" %}
+        <div>
+          <h2 class="mt-6 text-white text-center text-3xl font-extrabold">
+            Modifier mon mot de passe
+          </h2>
+        </div>
+        <br />
+        <div class="text-grey-900">
+          <div>
+            <label for="adresse" class="text-black sr-only">old_password</label>
+            <input
+              id="password"
+              name="old_password"
+              type="password"
+              required
+              class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-black font-bold rounded-t-md rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+              placeholder="Tapez votre mot de passe actuel (requis)"
+            />
+          </div>
+          <br />
+          <div>
+            <label for="new_adresse" class="sr-only">new_password</label>
+            <input
+              id="new_password"
+              name="new_password"
+              type="password"
+              required
+              class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+              placeholder="Entrez votre nouveau mot de passe"
+            />
+          </div>
+          <div>
+            <label for="new_adresse" class="sr-only">new_password2</label>
+            <input
+              id="new_password2"
+              name="new_password2"
+              type="password"
+              required
+              class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+              placeholder="Confirmez votre nouveau mot de passe"
+            />
+          </div>
+        </div>
+      </div>
+      {% endif %} {% if champ == "nom" %}
+      <div>
+        <button
+          type="submit"
+          class="group relative w-full bg-gradient-to-r from-sky-600 to-sky-900 flex rounded-md justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+        >
+          Changer mon nom
+        </button>
+      </div>
+      {% elif champ == "email" %}
+      <div>
+        <button
+          type="submit"
+          class="group relative w-full bg-gradient-to-r from-sky-600 to-sky-900 flex rounded-md justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+        >
+          Changer mon E-mail
+        </button>
+      </div>
+      {% elif champ == "adresse" %}
+      <div>
+        <button
+          type="submit"
+          class="group relative w-full bg-gradient-to-r from-sky-600 to-sky-900 flex rounded-md justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+        >
+          Changer mon adresse
+        </button>
+      </div>
+      {% elif champ == "password" %}
+      <div>
+        <button
+          type="submit"
+          class="group relative w-full bg-gradient-to-r from-sky-600 to-sky-900 flex rounded-md justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+        >
+          Changer mon mot de passe
+        </button>
+      </div>
+      {% endif %}
+    </form>
+  </div>
+</div>
+{% endblock %}
+

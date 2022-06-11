@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulaire tableau</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="barrenav">
+      <div><a class="navitem" href="index.html">Retour à l'Accueil</a></div>
+    </nav>
+    <br><br><br><br>
+    <div class="form">
+      <table border="9">
+        <form>
+      <tr>
+        <td><label for="nom1">Nom:</label></td>
+        <td>
+          <input
+            type="text"
+            name="nom"
+            id="nom1"
+            placeholder="Entrez votre nom"
+            required
+          />
+        </td>
+      </tr>
+      <tr>
+        <td><label for="mail1">Email:</label></td>
+        <td>
+          <input
+            type="email"
+            name="mail"
+            id="mail1"
+            placeholder="Indiquez votre Email"
+            required
+          />
+        </td>
+      </tr>
+      <tr>
+        <td><label for="pass1">Mot de Passe:</label></td>
+        <td>
+          <input
+            type="password"
+            name="Mot de Passe"
+            id="pass1"
+            length="25"
+            placeholder="Entrez votre mot de Passe"
+            required
+          />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Etes-vous inscrit?
+        </td>
+        <td><label for="oui">Oui</label>
+            <input type="radio" name="choix" id="Oui" checked />
+            <label for="non">Non</label>
+            <input type="radio" name="choix" id="Non" /></td>
+      </td>
+    </tr>
+    <tr>
+      <td>
+          Si oui, depuis quelle date?
+      </td>
+      <td><input type="datetime-local" /></td>
+    </tr>
+    <tr><td><label for="conditions" id="conditions" checked
+        >Accepter les conditions</label</td>
+        <td><input type="checkbox" name="conditions" id="conditions" /></td>
+    </tr>
+    <tr>
+        <td>Commentaires</td>
+        <td><textarea
+            name="Commentaires"
+            id="commentaire"
+            maxlength="140"
+            cols="30"
+            rows="7"
+          >
+          </textarea></td>
+    </tr>
+    <tr><td>Joindre un fichier</td>
+        <td><input type="file" />
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" style="text-align: center;"><button type="submit">Envoyer</button></td>
+        </form>
+      </table>
+    </div>
+    <footer class="footer">
+      <h3 style="color: rgb(248, 238, 238)">© Copyright 2022</h3>
+    </footer>
+  </body>
+</html>

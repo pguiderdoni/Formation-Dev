@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="index.html"> Page d'accueil </a>
+    <a href="contact.html"> Contactez-nous </a>
+    <a href="about.html"> A propos de nous </a>
+    <a href="tables.html"> Tableaux et listes</a>
+    <a href="form.html">Formulaire</a>
+
+    <h2>Formulaires</h2>
+    <form action="action.php" method="post" name="formulaire">
+      <label for="nom1">Votre Nom:</label>
+      <input
+        type="text"
+        name="nom"
+        id="nom1"
+        placeholder="Entrez votre nom"
+        required
+      />
+      <br />
+      <br />
+      <label for="mail1">Votre Email:</label>
+      <input
+        type="email"
+        name="mail"
+        id="mail1"
+        placeholder="Indiquez votre Email"
+        required
+      />
+      <br />
+      <br />
+      <label for="pass1">Entrez votre Mot de Passe:</label>
+      <input
+        type="password"
+        name="Mot de Passe"
+        id="pass1"
+        placeholder="Entrez votre mot de Passe"
+        required
+      />
+      <br /><br />
+      <input type="file" />
+      <br /><br />
+      <table border="2">
+        <tr>
+          <th>
+            <p>Possedez vous un véhicule?</p>
+            <label for="oui">Oui</label>
+            <input type="radio" name="choix" id="Oui" checked />
+            <label for="non">Non</label>
+            <input type="radio" name="choix" id="Non" />
+          </th>
+        </tr>
+      </table>
+      <br />
+      <table border="2">
+        <tr>
+          <th>
+            <p>Si oui, depuis quelle date?</p>
+            <input type="datetime-local" />
+          </th>
+        </tr>
+      </table>
+      <p>Choisissez la couleur:</p>
+      <input type="color" />
+      <p>Choisissez la marque:</p>
+      <select name="voitures" id="voiture">
+        <option value="default">-</option>
+        <option value="honda">Honda</option>
+        <option value="acura">Acura</option>
+        <option value="toyota">Toyota</option>
+        <option value="lexus">Lexus</option>
+        <option value="ford">Ford</option>
+        <option value="shelby">Shelby</option>
+      </select>
+      <br /><br />
+      <label for="conditions" id="conditions" checked
+        >Accepter les conditions</label
+      >
+      <input type="checkbox" name="conditions" id="conditions" />
+      <br /><br />
+      <textarea
+        name="Commentaires"
+        id="commentaire"
+        maxlength="140"
+        cols="30"
+        rows="7"
+        placeholder="Ecrivez votre commentaire..."
+      >
+      </textarea>
+      <button type="submit">Envoyer</button>
+      <br /><br />
+    </form>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+{% extends "base.html" %}{% block title %}Mot de passe perdu{% endblock %} {%
+block content%}
+<div class="min-h-full flex justify-center py-12 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-md w-full space-y-8">
+    <div>
+      <h2 class="mt-6 text-white text-center text-3xl font-extrabold">
+        Mot de passe oublié
+      </h2>
+    </div>
+    <form class="mt-8 space-y-6" method="POST">
+      <div class="rounded-md shadow-sm -space-y-px">
+        {% if question_secrete %}
+        <div class="text-white">
+          Question : {{ question_secrete }}
+          <div>
+            <label for="email2" class="sr-only">Adresse Email</label>
+            <input
+              id="email2"
+              name="email2"
+              type="hidden"
+              value="{{ email }}"
+              required
+              readonly
+              class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+            />
+          </div>
+          <div>
+            <label for="reponse" class="sr-only">Reponse secrete</label>
+            <input
+              id="reponse"
+              name="reponse_secrete"
+              type="text"
+              required
+              class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+              placeholder="Rentrer votre réponse secrète"
+            />
+          </div>
+        </div>
+        {% else %}
+        <div>
+          <label for="email" class="sr-only">Adresse Email</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            required
+            class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+            placeholder="Veuillez renseigner votre email"
+          />
+        </div>
+        {% endif %}
+      </div>
+      <div>
+        <button
+          type="submit"
+          class="group relative w-full bg-gradient-to-r from-sky-600 to-sky-900 flex rounded-md justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+        >
+          Vérifier mon email
+        </button>
+      </div>
+    </form>
+  </div>
+  {% endblock %}
+</div>

@@ -1,0 +1,45 @@
+Fonction "mini d'une liste"
+
+def mini(l):
+    m=0
+    for i in range(len(l)):
+        if l[m]>l[i]:
+            m=i
+    return m
+
+
+________________________________________
+fonction echange de valeurs
+
+def echange(l,i,j):
+    buf=0
+    buf=l[i]
+    l[i]=l[j]
+    l[j]=buf
+    return l
+
+
+_________________________________________
+recursivité sur puissance
+
+def puissance(a,n):
+    if n==0:
+        s=1
+    else:
+        s=a*puissance(a,n-1)
+    return s
+    
+print(puissance(10,10))
+
+
+
+
+
+    *
+   * *
+  * * *
+ * * * *
+* * * * * 
+
+
+

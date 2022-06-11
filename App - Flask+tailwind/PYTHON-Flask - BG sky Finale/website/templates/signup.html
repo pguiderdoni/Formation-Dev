@@ -1,0 +1,125 @@
+{% extends "base.html" %} {% block title %}Sign-up{% endblock %} {% block
+content%}
+<div
+  class="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8"
+>
+  <div class="max-w-md w-full space-y-8">
+    <div>
+      <h2 class="mt-6 text-center text-3xl font-extrabold text-white">
+        Créez votre compte
+      </h2>
+    </div>
+    <form class="mt-8 space-y-6" method="POST">
+      <div class="rounded-md shadow-sm -space-y-px">
+        <div>
+          <label for="nom" class="sr-only">Nom</label>
+          <input
+            id="nom"
+            name="nom"
+            type="nom"
+            required
+            class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+            placeholder="Nom"
+          />
+        </div>
+        <div>
+          <label for="email-address" class="sr-only">Email address</label>
+
+          <input
+            id="email-address"
+            name="email"
+            type="email"
+            required
+            class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+            placeholder="Adresse Email - vous servira d'identifant"
+          />
+        </div>
+        <div>
+          <label for="addresse" class="sr-only">Adresse</label>
+          <input
+            id="adresse"
+            name="adresse"
+            type="text"
+            class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+            placeholder="Adresse"
+          />
+        </div>
+        <div>
+          <label for="password" class="sr-only">Password</label>
+          <input
+            id="password"
+            name="password"
+            type="password"
+            required
+            class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+            placeholder="Mot de passe"
+          />
+        </div>
+        <div>
+          <label for="password2" class="sr-only">Password</label>
+          <input
+            id="password2"
+            name="password2"
+            type="password"
+            required
+            class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+            placeholder="Mot de passe - Vérification"
+          />
+        </div>
+        <div>
+          <label for="question" class="sr-only">Question secrète</label>
+          <select
+            id="question"
+            name="question"
+            type="text"
+            required
+            class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+            placeholder="Question Secrète"
+          >
+            <option>Choissez une question secrète</option>
+            <option>Quelle est votre ville de naissance?</option>
+            <option>Quelle était la marque de votre 1ère voiture?</option>
+            <option>Dans quel pays aimeriez vous vivre?</option>
+          </select>
+        </div>
+        <div>
+          <label for="reponse" class="sr-only">Réponse secrète</label>
+          <input
+            id="reponse"
+            name="reponse"
+            type="text"
+            required
+            class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+            placeholder="Réponse secrète"
+          />
+        </div>
+      </div>
+
+      <div>
+        <button
+          type="submit"
+          class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-gradient-to-r from-sky-600 to-sky-900 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+        >
+          <span class="absolute left-0 inset-y-0 flex items-center pl-3">
+            <!-- Heroicon name: solid/lock-closed -->
+            <svg
+              class="h-5 w-5 text-yellow-500 group-hover:text-indigo-400"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </span>
+          Créer mon Compte
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

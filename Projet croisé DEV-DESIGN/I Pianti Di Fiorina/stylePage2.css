@@ -1,0 +1,252 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: acumin pro;
+  min-height: 100vh;
+  max-width: 100vw;
+}
+li {
+  font-size: 11px;
+  font-weight: bold;
+  padding: 4px;
+  list-style: none;
+}
+.barreNav {
+  background-color: rgb(240, 240, 240);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.liensHaut {
+  color: black;
+  text-decoration: none;
+}
+.liensHaut:hover {
+  color: rgb(28, 200, 28);
+  text-decoration: underline;
+}
+.liensNav {
+  display: flex;
+  height: 45px;
+  max-width: 100vw;
+  background-color: rgb(240, 240, 240);
+  padding-top: 14px;
+  gap: 10px;
+  text-decoration: none;
+}
+.imageNav {
+  cursor: pointer;
+  padding-bottom: 15px;
+  padding-right: 25px;
+  height: 47px;
+  align-self: center;
+}
+.corpsPage {
+  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+}
+.corpsImg {
+  background-color: chartreuse;
+  background-image: url(images/fond2emePage.jpg);
+  background-repeat: none;
+  height: 79vh;
+  background-size: cover;
+  background-position-y: -7rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-content: stretch;
+  align-items: center;
+  gap: 10em;
+}
+
+.titreImg {
+  color: white;
+  font-size: 2.6rem;
+  font-weight: 600;
+  padding-left: 400px;
+}
+.sousIMG {
+  gap: 7em;
+  display: flex;
+  justify-content: center;
+}
+.soustitreIMG {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.imageBas {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1em;
+}
+.portraitparent {
+  display: flex;
+  align-items: center;
+}
+.articleImg {
+  border: 2px dashed red;
+  border-radius: 15px;
+  min-height: 25%;
+  max-width: 20%;
+  padding: 7px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: justify;
+  color: rgb(201, 16, 16);
+}
+.imageNav2 {
+  cursor: pointer;
+  padding-right: 10px;
+  height: 45px;
+}
+.portraitImg {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.corpsTxt {
+  display: flex;
+  gap: 45px;
+  padding-left: 5rem;
+  background-color: rgb(255, 255, 255);
+  height: auto;
+  justify-content: center;
+}
+.parentCorpsGauche {
+  flex-basis: 0;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.corpsGauche {
+  margin-top: 5rem;
+  border-bottom: 2px dashed rgb(202, 199, 199);
+}
+.corpsDroite {
+  padding-left: 35px;
+  border-left: 2px solid rgb(230, 228, 228);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 90px;
+  flex-basis: 0;
+  flex-grow: 3;
+}
+
+.sautsPages {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background-color: rgb(255, 255, 255);
+  padding-bottom: 15px;
+}
+.sautP {
+  text-decoration: none;
+  color: rgb(161, 159, 159);
+}
+.sautP:focus {
+  color: rgb(17, 165, 47);
+  text-decoration: underline;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0, 179, 60);
+  border-top: 3px solid rgb(99, 197, 127);
+  height: 180px;
+  gap: 50px;
+}
+
+.liensFoot {
+  flex-basis: 0;
+  flex-grow: 1;
+  gap: 5px;
+  padding-right: 45px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 50px;
+}
+.lien a {
+  text-decoration: none;
+  color: white;
+}
+.lien a:hover {
+  color: rgb(237, 15, 63);
+}
+.picFoot {
+  flex-basis: 0;
+  padding-top: 7px;
+}
+.imgFoot {
+  flex-basis: 0;
+  border: 2px solid rgb(99, 197, 127);
+  border-radius: 38%;
+  max-height: 165px;
+}
+.iconsFoot {
+  flex-basis: 0;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 170px;
+}
+.mailBox {
+  max-width: 185px;
+  flex-basis: 0;
+  flex-grow: 0;
+  display: flex;
+  background-color: rgb(0, 179, 60);
+  border: 2px solid rgb(235, 230, 230);
+  border-radius: 5px;
+  align-items: center;
+}
+.mailBox input {
+  max-width: 87%;
+  border: 1px transparent;
+  background-color: rgb(0, 179, 60);
+  padding: 8px 5px 8px 3px;
+}
+.mailBox input:focus {
+  outline: rgb(0, 179, 60);
+}
+.mailBox input::placeholder {
+  color: rgb(231, 225, 225);
+}
+.arrow {
+  cursor: pointer;
+  max-width: 5%;
+  color: white;
+  padding-right: 20px;
+  padding-bottom: 4px;
+}
+.arrow:hover {
+  transition: all 300ms;
+  transform: rotate(-135deg);
+  padding-left: 10px;
+  padding-bottom: 2px;
+}
+.lienRZO {
+  padding-top: 10px;
+  padding-right: 40px;
+  gap: 20px;
+  display: flex;
+  color: white;
+}
+.liensRzo {
+  text-decoration: none;
+  color: white;
+}
+.liensRzo:hover {
+  color: rgb(176, 58, 58);
+}

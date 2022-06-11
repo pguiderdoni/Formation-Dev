@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  background-color: lightblue;
+  height: 700px;
+  padding: 20px;
+  gap: 20px;
+  flex-direction: row;
+
+  /* selon l'axe principal */
+  justify-content: flex-start;
+
+  /* selon l'axe secondaire */
+  align-items: flex-start;
+
+  /* passe en dessous si pas de place */
+  /* flex-wrap: wrap; */
+
+  /* utiliser avec flex wrap */
+  align-content: flex-end;
+}
+
+.item {
+  background-color: lightcoral;
+  width: 200px;
+}
+
+.one {
+  min-height: 100px;
+  align-self: center;
+}
+
+.two {
+  min-height: 200px;
+  flex-basis: 0;
+  flex-grow: 2;
+}
+
+.three {
+  min-height: 300px;
+  flex-basis: 0;
+  flex-grow: 1;
+}

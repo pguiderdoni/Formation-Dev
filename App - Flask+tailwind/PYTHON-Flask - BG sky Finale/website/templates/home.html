@@ -1,0 +1,137 @@
+{% extends "base.html" %} {% block title %} Mes notes {% endblock %} {% block
+  content%} {% if id %}
+  <div class="heading text-center text-white font-bold text-2xl m-5">
+    Editez votre note
+  </div>
+  <style style>
+    body {
+      background: white !important;
+    }
+  </style>
+  <form
+    method="POST"
+    class="editor mx-auto w-10/12 flex bg-gradient-to-r from-sky-600 to-sky-900 rounded-xl flex-col text-gray-800 border border-gray-300 p-4 shadow-lg max-w-2xl"
+  >
+    <input
+      class="title bg-gray-100 border rounded-xl border-gray-300 p-2 mb-4 outline-none"
+      spellcheck="false"
+      placeholder="Title"
+      type="text"
+      value="{{note.titre}}"
+      disabled
+    />
+    <textarea
+      name="note"
+      class="description mb-4 bg-gray-100 rounded-xl sec p-3 h-60 border border-gray-300 outline-none"
+      spellcheck="false"
+    >{{note.corps}}</textarea>
+    <!-- buttons -->
+    <br />
+    <div class="buttons flex">
+      <a
+        class="btn border rounded-xl border-indigo-500 p-1 px-4 font-semibold cursor-pointer text-gray-200 ml-2 bg-indigo-500"
+        href="/"
+        >Cancel</a
+      >
+      <button
+        type="submit"
+        class="btn border rounded-xl border-indigo-500 p-1 px-4 font-semibold cursor-pointer text-gray-200 ml-2 bg-indigo-500"
+      >
+        Update
+      </button>
+    </div>
+  </form>
+  {% else %}
+  <div
+    class="min-h-full flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8"
+  >
+    <div
+      class="flex flex-col justify-center relative content-center w-full space-y-8"
+    >
+      <div>
+        <h2 class="flex flex-col text-center text-3xl font-extrabold text-white">
+          Gérez vos notes
+        </h2>
+      </div>
+      <form
+        class="flex flex-col self-center max-w-prose items-stretch"
+        method="POST"
+      >
+        <h3 class="text-white self-center">Créer une nouvelle note</h3>
+        <input
+          class="rounded-lg h-4 p-4 border-t mr-0 border-b border-l text-gray-800 border-gray-200 bg-white"
+          placeholder="Donnez un titre à votre note"
+          name="titre"
+        />
+        <button
+          class="px-2 rounded-lg bg-gradient-to-r from-sky-600 to-sky-900 text-white font-bold p-2 uppercase"
+        >
+          Créer cette note
+        </button>
+      </form>
+    </div>
+    <div class="w-auto mt-6 shadow-md">
+      <table class="text-sm text-left text-gray-500">
+        <thead
+          class="text-xs text-white uppercase border-b border-white bg-gradient-to-r from-sky-600 to-sky-900"
+        >
+          <tr>
+            <th class="px-6 py-3">Titre</th>
+            <th class="px-6 py-3">Auteur</th>
+            <th class="px-6 py-3">Date de creation</th>
+            <th class="px-6 py-3">
+              <span class="sr-only">Edit</span>
+            </th>
+          </tr>
+        </thead>
+        {% for note in user.notes %}
+        <tbody>
+          <tr
+            class="text-white uppercase bg-gradient-to-r from-cyan-500 to-indigo-800 border-b"
+          >
+            <th class="px-6 py-4 font-medium text-black whitespace-nowrap">
+              {% if note.corps != "" %}
+              <div class="group relative">
+                <div
+                  class="group-hover:visible invisible absolute w-auto text-center bottom-full left-1/2 transform -translate-x-1/2"
+                >
+                  <div class="relative mx-2">
+                    <div
+                      class="bg-black text-white text-xs rounded py-1 px-4 right-0 bottom-full"
+                    >{{note.corps[:75]}}<svg
+                        class="absolute h-3 w-full left-0 top-full"
+                        viewBox="0 0 255 255"
+                      >
+                        <polygon points="0,0 127.5,127.5 255,0" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                {{ note.titre }}
+              </div>
+              {% else %}
+              <div>{{ note.titre }}</div>
+              {% endif %}
+            </th>
+            <td class="px-6 py-4">{{ user.nom }}</td>
+            <td class="px-6 py-4">{{ note.date }}</td>
+            <td class="px-6 py-4 text-right">
+              <a
+                href="/./{{ note.id }}"
+                class="font-medium text-white px-6 hover:underline"
+                >Edit
+              </a>
+              <a
+                href="/delete-note/{{ note.id }}"
+                class="font-medium text-white hover:underline"
+              >
+                Delete
+              </a>
+            </td>
+          </tr>
+        </tbody>
+        {% endfor %} {% endif %}
+      </table>
+    </div>
+  </div>
+  {% endblock %}

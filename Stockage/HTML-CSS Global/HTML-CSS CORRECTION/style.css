@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navigation {
+  background-color: rgb(76, 8, 140);
+  color: white;
+  height: 50px;
+  display: flex;
+  padding: 10px 50px;
+  align-items: center;
+  border-bottom: 5px solid rgb(144, 40, 204);
+  transition: 1s ease-out 10ms;
+}
+
+.titre {
+  flex-grow: 1;
+  font-size: 30px;
+  font-family: "Indie Flower", cursive;
+  cursor: pointer;
+}
+
+.liens {
+  display: flex;
+  gap: 50px;
+  font-size: 20px;
+}
+
+.lien {
+  text-decoration: none;
+  color: white;
+  transition: 0.5s ease-out 50ms;
+  font-family: "Indie Flower", cursive;
+}
+
+.lien:hover {
+  color: rgb(196, 102, 14);
+}
+
+.corps {
+  display: flex;
+}
+
+.barre-verticale {
+  height: calc(100vh - 50px);
+  border-right: 5px solid rgb(144, 40, 204);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.coordonnees {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+}
+
+li {
+  list-style: none;
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
+}
+
+.gros-contenu {
+  display: flex;
+  flex-direction: column;
+}
+
+.contenu {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 50px;
+  padding: 50px;
+  border: 3px solid black;
+  border-radius: 10px;
+  align-self: flex-start;
+}
+
+.contenu-titre {
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: underline;
+  align-self: center;
+  font-family: "Indie Flower", cursive;
+}
+
+.contenu-description {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.image {
+  width: 300px;
+  border-radius: 50%;
+}
+
+.texte {
+  font-size: 20px;
+  line-height: 30px;
+  text-align: justify;
+}
+
+.footer {
+  height: 50px;
+  background-color: rgb(144, 40, 204);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s ease-out 10ms;
+}
+/* 
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap"
+            rel="stylesheet"
+        /> */

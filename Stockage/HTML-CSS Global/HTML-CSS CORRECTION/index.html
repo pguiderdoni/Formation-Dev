@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mon site</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="navigation" id="nav">
+        <div
+          class="titre"
+          onmouseover="changeBorderColor()"
+          onmouseleave="cancelColorChange()"
+          onclick="onClickTitle()"
+        >
+          Mon site
+        </div>
+        <div class="liens">
+          <a href="#" class="lien">Accueil</a>
+          <a href="#" class="lien">A propos</a>
+          <a href="#" class="lien">Contact</a>
+        </div>
+      </div>
+      <div class="corps">
+        <div class="barre-verticale">
+          <ul class="coordonnees">
+            <li>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatem a harum eum ex aperiam quaerat!
+            </li>
+            <li>
+              Eaque dolor non dolore quod natus deserunt consequuntur illo
+              veniam. Cumque illum enim nesciunt dignissimos!
+            </li>
+            <li>
+              Alias perferendis molestias repudiandae consequatur deleniti
+              molestiae accusamus tempore adipisci ipsum facere? Veniam, et
+              quas.
+            </li>
+            <li>
+              Consectetur doloremque quia labore quaerat pariatur. Magni
+              molestiae reprehenderit quaerat unde minima aut obcaecati nihil!
+            </li>
+            <li>
+              Labore doloremque quidem laudantium necessitatibus dolorem
+              pariatur eos, harum quasi. Laborum accusamus magnam nulla ut?
+            </li>
+          </ul>
+          <img src="https://picsum.photos/200" alt="Mon image" />
+        </div>
+        <div class="gros-contenu">
+          <div class="contenu">
+            <div class="contenu-titre" id="contenu-titre">Mes voyages</div>
+            <div class="contenu-description">
+              <img
+                src="https://picsum.photos/1000"
+                alt="Contenu image"
+                class="image"
+              />
+              <div class="texte">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Debitis quis quisquam quidem explicabo nesciunt quod quos magni,
+                repudiandae a quae ipsa inventore asperiores consectetur
+                quibusdam distinctio eius saepe dignissimos consequatur
+                necessitatibus nam cupiditate dolorem rerum eaque? Nemo
+                praesentium, soluta a odit exercitationem laborum doloremque
+                possimus alias. Officiis, libero quae aspernatur harum aliquam,
+                nobis quos alias consequuntur est dolorem eligendi et, magnam
+                nihil iure aut? Voluptates atque nisi nobis dolor, incidunt iure
+                explicabo ipsum culpa reiciendis eaque consequatur delectus,
+                ullam dolorem praesentium quaerat iste quidem corrupti rerum
+                asperiores assumenda provident commodi alias! Vitae veniam
+                dolores enim, eum nobis voluptas quidem modi!
+              </div>
+            </div>
+          </div>
+          <div class="footer" id="footer">Copyright</div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const changeBorderColor = () => {
+        const navigation = document.getElementById("nav");
+        navigation.style.borderBottom = "5px solid rgb(196, 102, 14)";
+        const footer = document.getElementById("footer");
+        footer.style.backgroundColor = "rgb(196, 102, 14)";
+      };
+
+      function cancelColorChange() {
+        const navigation = document.getElementById("nav");
+        navigation.style.borderBottom = "5px solid rgb(144, 40, 204)";
+        const footer = document.getElementById("footer");
+        footer.style.backgroundColor = "rgb(144, 40, 204)";
+      }
+
+      function onClickTitle() {
+        const titre = document.getElementById("contenu-titre");
+        if (titre.style.color === "rgb(144, 40, 204)") {
+          titre.style.color = "rgb(196, 102, 14)";
+        } else {
+          titre.style.color = "rgb(144, 40, 204)";
+        }
+        const footer = document.getElementById("footer");
+        if (footer.innerHTML === "Copyright") {
+          footer.innerHTML = "Toto";
+        } else {
+          footer.innerHTML = "Copyright";
+        }
+      }
+    </script>
+  </body>
+</html>
