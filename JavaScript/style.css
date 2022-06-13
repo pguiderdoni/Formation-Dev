@@ -7,108 +7,29 @@
 body {
   min-height: 100vh;
 }
+.carre {
+  display: inline-flex;
+  height: 200px;
+  width: 200px;
+  border: solid 2px black;
+  background-color: rgb(255, 255, 255);
+}
+.restart {
+  margin-right: 40px;
+  height: 50px;
+  width: 120px;
+}
+.versus {
+  height: 50px;
+  width: 160px;
+}
 .content {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  margin-left: 200px;
+  margin-top: 30px;
 }
-
-img {
-  object-fit: contain;
-  border-radius: 10%;
-  padding: 1em;
-  height: 45vh;
+.buttons {
+  display: flex;
+  gap: 10px;
 }
-
-/* * {
-  list-style: none;
-  text-decoration: none;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-.spoiler {
-  display: block;
-}
-
-.spoiler-content {
-  display: none;
-}
-
-.spoiler-content.visible {
-  display: block;
-}
-body {
-  background-color: rgb(149, 195, 236);
-  padding: 50px;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.tab-content {
-  display: none;
-}
-
-.tab-content.active {
-  display: block;
-  padding: 20px;
-  box-shadow: 0 1px 3px;
-  margin-bottom: 20px;
-  background-color: white;
-}
-.tabs li {
-  float: left;
-  display: block;
-}
-.tabs:after {
-  display: table;
-  content: "";
-  clear: both;
-}
-.tabs a {
-  display: inline-block;
-  padding: 10px 15px;
-  box-shadow: 0 1px 3px;
-}
-.tabs .active a {
-  color: red;
-  background-color: white;
-}
-
-.menu a {
-  display: inline-block;
-  background-color: antiquewhite;
-  padding: 30px 30px;
-  box-shadow: 0 1px 3px;
-}
-.menu .active a {
-  color: red;
-  background-color: white;
-}
-.main {
-  float: left;
-}
-.topbar {
-  padding: 2rem;
-}
-.content {
-  margin-top: 2rem;
-  background-color: aliceblue;
-}
-.sidebar {
-  background: rgb(210, 218, 223);
-  height: 100%;
-  width: 150px;
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding-top: 5rem;
-  margin-top: 15rem;
-}
-.fixed {
-  position: fixed;
-  top: 0px;
-} */

@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5773083-8f70-4d26-9448-2a47e5ba8de5" name="Changes" comment="" />
+    <list default="true" id="e5773083-8f70-4d26-9448-2a47e5ba8de5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../JavaScript/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaScript/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaScript/index2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../JavaScript/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../JavaScript/style.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
