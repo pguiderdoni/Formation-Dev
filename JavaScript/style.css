@@ -7,12 +7,8 @@
 body {
   min-height: 100vh;
 }
-.carre {
-  display: inline-flex;
-  height: 200px;
-  width: 200px;
-  border: solid 2px black;
-  background-color: rgb(255, 255, 255);
+canvas {
+  border: 2px solid black;
 }
 .restart {
   margin-right: 40px;
@@ -23,13 +19,9 @@ body {
   height: 50px;
   width: 160px;
 }
-.content {
-  display: flex;
-  flex-direction: column;
-  margin-left: 200px;
-  margin-top: 30px;
-}
+
 .buttons {
   display: flex;
   gap: 10px;
+  margin-left: 150px;
 }
