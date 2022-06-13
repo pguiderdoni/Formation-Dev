@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form>
+      <div><input type="text" id="name" placeholder="Nom" /></div>
+      <div>
+        <select id="gender">
+          <option>Choisissez une valeur</option>
+          <option value="male">Homme</option>
+          <option value="female">Femme</option>
+          <option value="other">Autre</option>
+        </select>
+      </div>
+    </form>
+    <div id="result">
+      Nom : <span id="res-name"></span><br />
+      Genre : <span id="res-gender"></span><br />
+      Souris : (<span>X: </span><span id="mouse-x"></span>,<span>Y: </span>
+      <span id="mouse-y"></span>)
+    </div>
+    <div id="map"></div>
+
+    <article id="parent">
+      <a class="link" id="child" href="#">Cliquez ici</a>
+      <p>Battle d'événement !</p>
+      Parent : <span id="parent-count">0</span> Enfant :
+      <span id="child-count">0</span>
+    </article>
+
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>

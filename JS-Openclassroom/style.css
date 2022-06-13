@@ -1,0 +1,42 @@
+body {
+  padding: 50px;
+  background-color: rgb(239, 235, 231);
+}
+
+form,
+#result {
+  background-color: aliceblue;
+  margin: auto;
+  margin-bottom: 20px;
+  width: 300px;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+span {
+  margin: 10px;
+}
+#map {
+  background-color: aliceblue;
+  margin: auto;
+  margin-bottom: 20px;
+  width: 400px;
+  height: 400px;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+article {
+  margin: auto;
+  width: 300px;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+.link {
+  float: right;
+  margin-left: 30px;
+}
+#parent {
+  background-color: aliceblue;
+}
