@@ -100,15 +100,14 @@ def modification(champ):
         new_nom = request.form.get("new_nom")
         new_email = request.form.get("new_email")
         new_adresse = request.form.get("new_adresse")
+        user = User.query.filter_by(email=current_user.email).first()
         if champ == "nom":
-            user = User.query.filter_by(email=current_user.email).first()
             user.nom = new_nom
             db.session.commit()
             flash('Nom modifié avec succès!', 'success')
             return redirect(url_for("views.compte"))
         if champ == "email":
-            user = User.query.filter_by(email=current_user.email).first()
-            user_db = User.query.filter_by(email=current_user.email).first()
+            user_db = User.query.filter_by(email=new_email).first()
             if not user_db:
                 user.email = new_email
                 db.session.commit()
@@ -118,13 +117,11 @@ def modification(champ):
                 flash("Cet E-mail est déjà enregistré,", category="fail")
                 return render_template("modifs.html", user=current_user, champ=champ)
         if champ == "adresse":
-            user = User.query.filter_by(email=current_user.email).first()
             user.adresse = new_adresse
             db.session.commit()
             flash('Adresse modifiée avec succès!', 'success')
             return redirect(url_for("views.compte"))
         if champ == "password":
-            user = User.query.filter_by(email=current_user.email).first()
             if check_password_hash(user.password, old_password):
                 if new_password == new_password2:
                     user.password = generate_password_hash(new_password, method="sha256")
