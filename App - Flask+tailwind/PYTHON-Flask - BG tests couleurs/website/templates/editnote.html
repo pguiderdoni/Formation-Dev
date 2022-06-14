@@ -1,0 +1,26 @@
+{% extends "base.html" %}{% block title %}Gérer mes notes{% endblock %}{% block
+content%}
+
+<div class="mt-12 space-y-8">
+  <div method="POST" class="border-2 border-gray-300 rounded-lg">
+    <button class="flex items-center justify-between w-full p-8">
+      <h1 class="font-semibold text-gray-700 white:text-dark">
+        {{ note.titre }}
+      </h1>
+
+      <span class="text-gray-400 bg-gray-200 rounded-full">
+        <a
+          class="col-span-3 px-4 py-5 px-6 font-medium text-indigo-600 hover:text-indigo-500"
+          href="/edit"
+          >Modifier</a
+        >
+      </span>
+    </button>
+
+    <hr class="border-gray-300" />
+
+    <p class="p-8 text-sm text-gray-500 dark:text-gray-300">{{ note.corps }}</p>
+  </div>
+</div>
+
+{% endblock %}
