@@ -1,11 +1,11 @@
 - formation dev bac+3: nbre de personnes interessees:
 
-oui: JB, jordan, mickael, diogo, jean marie, adrien
+oui: JB, jordan, mickael, diogo, jean marie, adrien, nico
 
 
 non:
 
 
-peut etre: dume, nico
+peut etre: dume
 
 ----------------------------------------------------------------------
