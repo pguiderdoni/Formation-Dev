@@ -1,0 +1,180 @@
+<?php
+$prenom = 'Pierre';
+$nom = 'Guiderdoni';
+$age = 41;
+$majorite = 'mineur';
+$math = 14;
+$histoire = 14;
+$anglais = 17;
+$note = ($math + $histoire + $anglais);
+$année = 'ratée';
+?>
+
+<h1>
+<?php
+
+// if ($age >= 18)
+// $majorite = 'majeur';
+
+// if ($note > 30)
+// $annee = "réussie";
+
+// $moyenne = $note/3;
+
+// echo "bonjour ".$prenom." ".$nom.", "."tu as ".$age." ans"." donc tu es ".$majorite.', '.
+// '<br>'.'et ton année est '.$annee.' avec '.$moyenne.' de moyenne !!!'.'<br>'.'<br>' .'<br>'   ;
+
+
+$lait = 20;
+$farine = 222;
+
+if (!empty($lait) && !empty($farine)){
+
+    echo "il manque des ingrédients!";
+
+    if($lait > $farine){
+
+        echo "Il y'a plus de lait que de farine";
+
+    } 
+    else if($lait < $farine){
+
+        echo "Il y'a plus de farine que de lait";
+
+    }
+    else if($lait == $farine){
+
+        echo "il y'a autant de lait que de farine";
+
+    }
+
+    if(($lait + $farine) > 0){
+
+        $total = $lait + $farine;
+
+    }
+
+    if(isset($total)){
+
+        echo '<br>'."Il y'a ".$lait."ml de Lait et ".$farine."ml de farine, soit un total de ".$total."ml";
+
+    }
+}
+
+
+?>
+</h1>
+
+
+<!-- 
+// $total_pilotes = 20;
+// $nb_pilote = 1;
+
+// while( $nb_pilote < 11){
+//     echo"<tr>
+//         <td style='background-color: red'>pilote ".$nb_pilote."</td>";
+//         $nb_pilote++;
+//     echo "<td></td>
+//         </tr>";
+//     echo"<tr>
+//         <td></td>";
+//     echo "<td style='background-color: blue; color:white'>pilote ".$nb_pilote."</td>
+//         </tr>";
+//         $nb_pilote++;
+     
+// }
+
+// for ($nb_pilote = 11; $nb_pilote <= $total_pilotes; $nb_pilote++){
+//     echo"<tr>
+//          <td style='background-color: red'>pilote ".$nb_pilote."</td>"; 
+//         $nb_pilote++;      
+      
+//     echo"<tr>
+//          <td ></td>";            
+//     echo"<td style='background-color: blue; color:white'>pilote ".$nb_pilote."</td>
+//          </tr>";
+//       }
+
+// echo "</table> ";
+
+// ------------------------------------------------------------------------------------------------------
+
+// echo "<img src='img/finish.png' alt=''>"."<br>"."<table>";
+
+// $pilotes = array('Quentin', 'Paul-Henri', 'Sylvain', 'Jean-Eude', 'Albert', 'Prost', 'Senna','Lewys');
+// $parite = 0;
+
+// foreach ($pilotes as $pilote){
+//     if ($parite%2 == 0){
+//         echo"<tr><td style='background-color: red'>".$pilote."</td><td></td></tr>";               
+//         }
+//         else{
+//         echo"<tr><td></td><td style='background-color: blue; color:white'>".$pilote."</td></tr>";            
+//         }
+//         $parite++; 
+// }
+
+// echo "</table> ";
+
+
+// ------------------------------------------------------------------------------------------------------
+
+
+// echo "<table>";
+
+// $equipe = ["gardiens" => ["31" =>"Dume"], 
+//                 "defenseurs" => ["11" => "Jean-Oui","23" =>"Nanard", "07" =>"Gugusse", "21" =>"Michel"], 
+//                 "milieus" => ["04" =>"balagnos","69" => "Clara Morgane","55" => "Jean-Pull"], 
+//                 "attaquants" => ["00" =>"Vladimir","54" =>"Helmut","01" => "Paul-Henri"]
+//           ];
+
+// foreach($equipe as $poste => $joueurs){
+//     echo "<tr class='poste'><td><br>".$poste.":"."</td></tr>";
+//     foreach($joueurs as $numero => $joueur){
+//         echo "<tr class='ligne'><td>".$joueur." le n°".$numero."</td></tr>"; 
+// }
+// }
+
+// echo "</table> ";
+
+
+// ------------------------------------------------------------------------------------------------------
+
+// function affiche_cours($cours, $duree){
+//     return "<p>Le cours de $cours dure $duree heures</p>";
+
+// }
+
+// $matiere = ["35" => "HTML","45" =>"PHP", "50" =>"Java", "5" =>"WordPress"];
+
+
+// echo "<table>";
+
+// foreach($matiere as $duree => $cour){
+//     echo affiche_cours($cour,$duree);
+//     }
+
+// -----------------------------------------------------------------------------------------------------
+
+// $compteur = 0;
+
+// function comparer($var1, $var2){
+//     if($var1 < $var2){
+//         return "<p>Le plus grand est $var2 </p>";
+//         }
+//         elseif($var1 > $var2){
+//             return "<p>Le plus grand est $var1 </p>"; 
+//         }
+//         else{
+//             return "<p>Les 2 sont égaux</p>";
+//         }        
+// }  
+
+
+// while ($compteur < 10){
+//    $var1 = rand(0,100);
+//    $var2 = rand(0,100);
+//    $compteur++;
+//    echo comparer($var1, $var2);
+    
+// } -->

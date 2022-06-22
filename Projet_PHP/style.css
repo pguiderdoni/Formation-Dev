@@ -1,0 +1,23 @@
+/* img {
+  width: 300px;
+  margin-left: 430px;
+} */
+table {
+  border-collapse: separate;
+  border-spacing: 30px;
+  padding: 5px;
+  padding-top: 0;
+  margin-left: 250px;
+  height: 500px;
+  width: 800px;
+}
+
+.ligne {
+  height: 50px;
+  display: inline-flex;
+  width: 120px;
+  border: 2px solid black;
+}
+.poste {
+  border: transparent;
+}
