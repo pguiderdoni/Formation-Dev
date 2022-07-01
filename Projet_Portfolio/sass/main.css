@@ -1,0 +1,153 @@
+@charset "UTF-8";
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(40, 40, 44);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.canvasBG {
+  background-color: rgb(40, 40, 44);
+}
+
+.navigationBar {
+  background-color: rgb(40, 40, 44);
+}
+
+a.active {
+  color: rgb(169, 14, 236);
+}
+
+.carousel-item {
+  height: 90vh;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.img-cards {
+  height: 90vh;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.card:hover {
+  box-shadow: 22px 22px 18px rgb(80, 80, 80);
+  transition: box-shadow 400ms ease-in-out;
+}
+
+.buttonName {
+  position: relative;
+  border: 1px solid rgb(255, 105, 0);
+}
+
+.buttonName::before {
+  content: "";
+  position: absolute;
+  left: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 1px;
+  background: rgb(255, 105, 0);
+  box-shadow: 5px -8px 0 rgb(255, 105, 0), 5px 8px 0 rgb(255, 105, 0);
+}
+
+.barresProgress {
+  background-color: rgb(230, 227, 227);
+}
+
+/* Boutton néon animé */
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttonContainer a {
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  border: 2px solid rgb(255, 105, 0);
+  text-decoration: none;
+  letter-spacing: 2px;
+  color: white;
+  text-transform: uppercase;
+  -webkit-box-reflect: below 0px linear-gradient(transparent);
+  transition: 0.5s;
+  transition-delay: 0s;
+}
+
+.buttonContainer a:hover {
+  transition-delay: 1s;
+  overflow: hidden;
+  border-radius: 15px;
+  color: #000;
+  box-shadow: 0 0 10px rgb(255, 105, 0), 0 0 20px rgb(255, 105, 0), 0 0 40px rgb(255, 105, 0), 0 0 80px rgb(255, 105, 0), 0 0 160px rgb(255, 105, 0);
+}
+
+.buttonContainer a span {
+  position: relative;
+  z-index: 100;
+}
+
+.buttonContainer a:nth-child(2) {
+  filter: hue-rotate(80deg);
+}
+
+.buttonContainer a::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 2px;
+  background: rgb(255, 105, 0);
+  box-shadow: 5px -8px 0 rgb(255, 105, 0), 5px 8px 0 rgb(255, 105, 0);
+  transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+  transition-delay: 1s, 0.5s, 0s, 0s;
+}
+
+.buttonContainer a:hover::before {
+  width: 60%;
+  height: 100%;
+  left: -2px;
+  box-shadow: 5px 0 0 rgb(255, 105, 0), 5px 0 0 rgb(255, 105, 0);
+  transition-delay: 0s, 0.5s, 1s, 1s;
+}
+
+.buttonContainer a::after {
+  content: "";
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 2px;
+  background: rgb(255, 105, 0);
+  box-shadow: -5px -8px 0 rgb(255, 105, 0), -5px 8px 0 rgb(255, 105, 0);
+  transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+  transition-delay: 1s, 0.5s, 0s, 0s;
+}
+
+.buttonContainer a:hover::after {
+  width: 60%;
+  height: 100%;
+  right: -2px;
+  box-shadow: -5px 0 0 rgb(255, 105, 0), -5px 0 0 rgb(255, 105, 0);
+  transition-delay: 0s, 0.5s, 1s, 1s;
+}
+
+/* Boutton néon animé */
+.bootsBar {
+  background-color: rgb(169, 14, 236);
+  border: 1px solid rgb(169, 14, 236);
+}
+
+.bootsIcon {
+  color: rgb(169, 14, 236);
+}/*# sourceMappingURL=main.css.map */
