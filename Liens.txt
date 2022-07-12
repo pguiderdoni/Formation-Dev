@@ -1,5 +1,0 @@
-https://www.societe.com/cgi-bin/liste?ori=avance&nom=&dirig=&pre=&ape=6201Z&dep=20
-
-https://pguiderdoni.github.io/Projet_Portfolio/
-
-https://corsic-app.herokuapp.com/identification?next=%2F
