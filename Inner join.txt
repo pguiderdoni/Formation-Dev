@@ -1,0 +1,5 @@
+SELECT `nom_marque`,`nom_modele` 
+FROM `marques` 
+INNER JOIN `modeles` 
+WHERE `marques`.`id_marque` = '3' 
+AND `modeles`.`id_modele` = '3'
