@@ -3,3 +3,21 @@ FROM `marques`
 INNER JOIN `modeles` 
 WHERE `marques`.`id_marque` = '3' 
 AND `modeles`.`id_modele` = '3'
+
+
+
+SELECT * 
+
+FROM `controle_tech` 
+                    
+INNER JOIN `vehicules` ON `controle_tech`.`id_vehicule` = `vehicules`.`id_vehicule`
+                    
+INNER JOIN `marques` ON `vehicules`.`id_marque` = `marques`.`id_marque`  
+                    
+INNER JOIN `modeles` ON `vehicules`.`id_modele` = `modeles`.`id_modele`  
+                    
+INNER JOIN `clients` ON `controle_tech`.`id_user` =   `clients`.`id_user`
+                    
+WHERE `controle_tech`.`state` >= 2
+                    
+ORDER BY `id_controle`
